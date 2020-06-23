@@ -16,14 +16,15 @@ const PhraseContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: SF Pro Display;
+  font-family: "Karla", sans-serif;
   font-size: 96px;
+  font-weight: bold;
   line-height: 110%;
   letter-spacing: 0.01em;
 `;
 
 const Description = styled.h4`
-  font-family: SF Pro Text;
+  font-family: "Karla", sans-serif;
   font-size: 28px;
   line-height: 150%;
   opacity: 0.8;
@@ -49,7 +50,7 @@ const MetaData = styled.div`
 `;
 
 const NextTitle = styled.h3`
-  font-family: SF Pro Text;
+  font-family: "Karla", sans-serif;
   font-size: 36px;
   line-height: 135%;
 `;
@@ -59,7 +60,7 @@ const Arrow = styled.div`
 `;
 
 const Next = styled.div`
-  font-family: SF Pro Display;
+  font-family: "Karla", sans-serif;
   font-size: 20px;
   line-height: 20px;
   mix-blend-mode: normal;

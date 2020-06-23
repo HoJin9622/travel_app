@@ -23,7 +23,8 @@ const SideNavi = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: SF Pro Display;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.01em;
@@ -31,7 +32,7 @@ const Title = styled.h1`
 `;
 
 const NaviLetter = styled.h4`
-  font-family: SF Pro Text;
+  font-family: "Karla", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
