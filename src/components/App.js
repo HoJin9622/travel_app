@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Navigation from "./Navigation";
 import Banner from "./Banner";
+import Booking from "./Booking";
 
 const Background = styled.div`
   width: 100%;
@@ -17,6 +18,7 @@ function App() {
       <Background>
         <Navigation />
         <Banner />
+        <Booking />
       </Background>
     </>
   );
