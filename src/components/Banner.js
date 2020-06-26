@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+const right_arrow = <FontAwesomeIcon icon={faArrowRight} />;
 
 const Container = styled.div`
   display: flex;
@@ -56,6 +60,7 @@ const NextTitle = styled.h3`
 `;
 
 const Arrow = styled.div`
+  font-size: 20px;
   opacity: 0.5;
 `;
 
@@ -95,7 +100,7 @@ function Banner() {
             <br /> of Rock
             <br /> Cliffs
           </NextTitle>
-          <Arrow>-></Arrow>
+          <Arrow>{right_arrow}</Arrow>
         </MetaData>
         <NextImage></NextImage>
       </NextContainer>
