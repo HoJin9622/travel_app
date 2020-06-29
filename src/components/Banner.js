@@ -75,7 +75,7 @@ const Next = styled.div`
 
 const NextImage = styled.div`
   width: 40%;
-  background-image: url("/images/nextImage.png");
+  background-image: url("https://github.com/HoJin9622/travel_app/blob/master/public/images/nextImage.png?raw=true");
   background-size: cover;
   background-position: center center;
 `;
