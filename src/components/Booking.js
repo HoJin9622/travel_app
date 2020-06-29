@@ -1,5 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faCalendarCheck,
+  faUserAlt,
+  faSortDown,
+} from "@fortawesome/free-solid-svg-icons";
+
+const homeIcon = <FontAwesomeIcon icon={faHome} />;
+const calenderIcon = <FontAwesomeIcon icon={faCalendarCheck} />;
+const userIcon = <FontAwesomeIcon icon={faUserAlt} />;
+const dropDownIcon = <FontAwesomeIcon icon={faSortDown} />;
 
 const Container = styled.div`
   position: absolute;
@@ -38,10 +50,76 @@ const Title = styled.h4`
 
 const BookingContainer = styled.div`
   height: 72px;
-  opacity: 0.3;
-  border: 1px solid #e7e7f2;
+  border: 1px solid rgba(231, 231, 242, 0.3);
   box-sizing: border-box;
   border-radius: 10px;
+  display: flex;
+  color: #e7e7f2;
+  font-family: "Karla", sans-serif;
+`;
+
+const AccommodationContainer = styled.div`
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid rgba(231, 231, 242, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+`;
+
+const CheckIn = styled.div`
+  width: 22%;
+  height: 100%;
+  border-right: 1px solid rgba(231, 231, 242, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0 15px;
+`;
+
+const CheckOut = styled.div`
+  width: 15%;
+  height: 100%;
+  border-right: 1px solid rgba(231, 231, 242, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0 15px;
+`;
+
+const Guests = styled.div`
+  width: 23%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+`;
+
+const DataContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const TextContainer = styled.div``;
+
+const IconContainer = styled.div`
+  opacity: 0.6;
+  padding: 0 10px 0 0;
+`;
+
+const BookTitle = styled.h4`
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.6;
+`;
+
+const BookingInformation = styled.h4`
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 `;
 
 const SearchButton = styled.div`
@@ -66,7 +144,43 @@ function Booking() {
       <BG>
         <ReservationContainer>
           <Title>Book your vacation</Title>
-          <BookingContainer></BookingContainer>
+          <BookingContainer>
+            <AccommodationContainer>
+              <DataContainer>
+                <IconContainer>{homeIcon}</IconContainer>
+                <TextContainer>
+                  <BookTitle>Accommodation</BookTitle>
+                  <BookingInformation>
+                    6730 Luna Land North Rhiannonmouth
+                  </BookingInformation>
+                </TextContainer>
+              </DataContainer>
+              <IconContainer>{dropDownIcon}</IconContainer>
+            </AccommodationContainer>
+            <CheckIn>
+              <IconContainer>{calenderIcon}</IconContainer>
+              <TextContainer>
+                <BookTitle>Check-in</BookTitle>
+                <BookingInformation>19.06.2019</BookingInformation>
+              </TextContainer>
+            </CheckIn>
+            <CheckOut>
+              <TextContainer>
+                <BookTitle>Check-out</BookTitle>
+                <BookingInformation>19.06.2019</BookingInformation>
+              </TextContainer>
+            </CheckOut>
+            <Guests>
+              <DataContainer>
+                <IconContainer>{userIcon}</IconContainer>
+                <TextContainer>
+                  <BookTitle>Guests</BookTitle>
+                  <BookingInformation>4adults</BookingInformation>
+                </TextContainer>
+              </DataContainer>
+              <IconContainer>{dropDownIcon}</IconContainer>
+            </Guests>
+          </BookingContainer>
         </ReservationContainer>
         <SearchButton>Search</SearchButton>
       </BG>
