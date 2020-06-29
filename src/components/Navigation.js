@@ -29,6 +29,7 @@ const Title = styled.h1`
   line-height: 29px;
   letter-spacing: 0.01em;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const NaviLetter = styled.h4`
@@ -36,6 +37,7 @@ const NaviLetter = styled.h4`
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const NavigationBottomLine = styled.div`

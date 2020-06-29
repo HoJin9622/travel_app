@@ -62,6 +62,7 @@ const NextTitle = styled.h3`
 const Arrow = styled.div`
   font-size: 20px;
   opacity: 0.5;
+  cursor: pointer;
 `;
 
 const Next = styled.div`
@@ -102,7 +103,7 @@ function Banner() {
           </NextTitle>
           <Arrow>{right_arrow}</Arrow>
         </MetaData>
-        <NextImage></NextImage>
+        <NextImage />
       </NextContainer>
     </Container>
   );

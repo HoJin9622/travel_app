@@ -67,6 +67,7 @@ const AccommodationContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 15px 0 15px;
+  cursor: pointer;
 `;
 
 const CheckIn = styled.div`
@@ -77,6 +78,7 @@ const CheckIn = styled.div`
   display: flex;
   align-items: center;
   padding: 0 15px 0 15px;
+  cursor: pointer;
 `;
 
 const CheckOut = styled.div`
@@ -87,6 +89,7 @@ const CheckOut = styled.div`
   display: flex;
   align-items: center;
   padding: 0 15px 0 15px;
+  cursor: pointer;
 `;
 
 const Guests = styled.div`
@@ -96,6 +99,7 @@ const Guests = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 15px 0 15px;
+  cursor: pointer;
 `;
 
 const DataContainer = styled.div`
@@ -175,7 +179,7 @@ function Booking() {
                 <IconContainer>{userIcon}</IconContainer>
                 <TextContainer>
                   <BookTitle>Guests</BookTitle>
-                  <BookingInformation>4adults</BookingInformation>
+                  <BookingInformation>4 adults</BookingInformation>
                 </TextContainer>
               </DataContainer>
               <IconContainer>{dropDownIcon}</IconContainer>
