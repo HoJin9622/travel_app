@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/travel_app/static/js/main.f9a776ad.chunk.js",
+    "main.js.map": "/travel_app/static/js/main.f9a776ad.chunk.js.map",
+    "runtime-main.js": "/travel_app/static/js/runtime-main.9bfd6b33.js",
+    "runtime-main.js.map": "/travel_app/static/js/runtime-main.9bfd6b33.js.map",
+    "static/js/2.76f2207b.chunk.js": "/travel_app/static/js/2.76f2207b.chunk.js",
+    "static/js/2.76f2207b.chunk.js.map": "/travel_app/static/js/2.76f2207b.chunk.js.map",
+    "index.html": "/travel_app/index.html",
+    "precache-manifest.430af6db3b32c277f53ddc082e43634b.js": "/travel_app/precache-manifest.430af6db3b32c277f53ddc082e43634b.js",
+    "service-worker.js": "/travel_app/service-worker.js",
+    "static/js/2.76f2207b.chunk.js.LICENSE.txt": "/travel_app/static/js/2.76f2207b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bfd6b33.js",
+    "static/js/2.76f2207b.chunk.js",
+    "static/js/main.f9a776ad.chunk.js"
+  ]
+}
