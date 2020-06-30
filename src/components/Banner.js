@@ -23,6 +23,10 @@ const PhraseContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: #ffffff;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 0 15px 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -74,6 +78,7 @@ const MetaData = styled.div`
 
   @media only screen and (max-width: 768px) {
     padding: 24px 0 24px 28px;
+    width: 50%;
   }
 `;
 
@@ -106,6 +111,10 @@ const NextImage = styled.div`
   background-image: url("https://github.com/HoJin9622/travel_app/blob/master/public/images/nextImage.png?raw=true");
   background-size: cover;
   background-position: center center;
+
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
 `;
 
 function Banner() {
