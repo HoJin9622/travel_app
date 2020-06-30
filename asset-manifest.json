@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/travel_app/static/js/main.d85433aa.chunk.js",
-    "main.js.map": "/travel_app/static/js/main.d85433aa.chunk.js.map",
+    "main.js": "/travel_app/static/js/main.38b81a02.chunk.js",
+    "main.js.map": "/travel_app/static/js/main.38b81a02.chunk.js.map",
     "runtime-main.js": "/travel_app/static/js/runtime-main.9bfd6b33.js",
     "runtime-main.js.map": "/travel_app/static/js/runtime-main.9bfd6b33.js.map",
     "static/js/2.76f2207b.chunk.js": "/travel_app/static/js/2.76f2207b.chunk.js",
     "static/js/2.76f2207b.chunk.js.map": "/travel_app/static/js/2.76f2207b.chunk.js.map",
     "index.html": "/travel_app/index.html",
-    "precache-manifest.b8c9337b4c870ad0d9502829a9b89b17.js": "/travel_app/precache-manifest.b8c9337b4c870ad0d9502829a9b89b17.js",
+    "precache-manifest.df878446b149c5fe246ecc80f7342970.js": "/travel_app/precache-manifest.df878446b149c5fe246ecc80f7342970.js",
     "service-worker.js": "/travel_app/service-worker.js",
     "static/js/2.76f2207b.chunk.js.LICENSE.txt": "/travel_app/static/js/2.76f2207b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9bfd6b33.js",
     "static/js/2.76f2207b.chunk.js",
-    "static/js/main.d85433aa.chunk.js"
+    "static/js/main.38b81a02.chunk.js"
   ]
 }
