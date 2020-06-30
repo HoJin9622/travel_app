@@ -136,6 +136,7 @@ const CheckOut = styled.div`
     padding: 0 0 0 0;
     border: none;
     margin-bottom: 8px;
+    padding: 0px 0 0 25px;
   }
 `;
 

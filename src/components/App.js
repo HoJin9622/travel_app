@@ -10,6 +10,10 @@ const Background = styled.div`
   background-image: url("https://github.com/HoJin9622/travel_app/blob/master/public/images/bg.png?raw=true");
   background-size: cover;
   background-position: center center;
+
+  @media only screen and (max-width: 768px) {
+    height: 812px;
+  }
 `;
 
 function App() {
