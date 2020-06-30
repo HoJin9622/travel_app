@@ -20,6 +20,10 @@ const Container = styled.div`
   height: 20%;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 35%;
+  }
 `;
 
 const BG = styled.div`
@@ -31,10 +35,23 @@ const BG = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
 `;
 
 const ReservationContainer = styled.div`
   width: 70%;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+    height: 100%;
+  }
 `;
 
 const Title = styled.h4`
@@ -46,6 +63,10 @@ const Title = styled.h4`
   color: #ffffff;
   mix-blend-mode: normal;
   margin-bottom: 16px;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 8px;
+  }
 `;
 
 const BookingContainer = styled.div`
@@ -56,6 +77,11 @@ const BookingContainer = styled.div`
   display: flex;
   color: #e7e7f2;
   font-family: "Karla", sans-serif;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    border: none;
+  }
 `;
 
 const AccommodationContainer = styled.div`
@@ -68,6 +94,13 @@ const AccommodationContainer = styled.div`
   justify-content: space-between;
   padding: 0 15px 0 15px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 0 0 0;
+    border: none;
+    margin-bottom: 8px;
+  }
 `;
 
 const CheckIn = styled.div`
@@ -79,6 +112,13 @@ const CheckIn = styled.div`
   align-items: center;
   padding: 0 15px 0 15px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 0 0 0;
+    border: none;
+    margin-bottom: 8px;
+  }
 `;
 
 const CheckOut = styled.div`
@@ -90,6 +130,13 @@ const CheckOut = styled.div`
   align-items: center;
   padding: 0 15px 0 15px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 0 0 0;
+    border: none;
+    margin-bottom: 8px;
+  }
 `;
 
 const Guests = styled.div`
@@ -100,6 +147,11 @@ const Guests = styled.div`
   justify-content: space-between;
   padding: 0 15px 0 15px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
 `;
 
 const DataContainer = styled.div`
@@ -140,6 +192,10 @@ const SearchButton = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 function Booking() {
