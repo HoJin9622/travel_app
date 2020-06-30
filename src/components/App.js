@@ -12,7 +12,8 @@ const Background = styled.div`
   background-position: center center;
 
   @media only screen and (max-width: 768px) {
-    height: 812px;
+    position: relative;
+    min-height: 812px;
   }
 `;
 
