@@ -8,7 +8,8 @@ const Container = styled.div`
   padding: 42px 240px 0 240px;
 
   @media only screen and (max-width: 768px) {
-    padding: 20px 40px 0 40px;
+    padding: 10px 0 0 0;
+    width: 100%;
   }
 `;
 
@@ -30,7 +31,7 @@ const SideNavi = styled.div`
   width: 15%;
 
   @media only screen and (max-width: 768px) {
-    width: 25%;
+    width: 30%;
   }
 `;
 
@@ -42,6 +43,10 @@ const Title = styled.h1`
   letter-spacing: 0.01em;
   color: #ffffff;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const NaviLetter = styled.h4`
@@ -50,6 +55,10 @@ const NaviLetter = styled.h4`
   line-height: 21px;
   color: #ffffff;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const NavigationBottomLine = styled.div`

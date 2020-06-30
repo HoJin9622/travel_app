@@ -13,7 +13,7 @@ const Container = styled.div`
   height: 35%;
 
   @media only screen and (max-width: 768px) {
-    padding: 60px 0 0 40px;
+    padding: 20px 0 0 20px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -33,7 +33,7 @@ const Title = styled.h1`
   letter-spacing: 0.01em;
 
   @media only screen and (max-width: 768px) {
-    font-size: 36px;
+    font-size: 32px;
   }
 `;
 
@@ -44,7 +44,7 @@ const Description = styled.h4`
   opacity: 0.8;
 
   @media only screen and (max-width: 768px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
