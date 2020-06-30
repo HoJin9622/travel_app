@@ -6,6 +6,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 42px 240px 0 240px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px 40px 0 40px;
+  }
 `;
 
 const NavigationContainer = styled.div`
@@ -14,12 +18,20 @@ const NavigationContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 0 0 29px 0;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 0 5px 0;
+  }
 `;
 
 const SideNavi = styled.div`
   display: flex;
   justify-content: space-between;
   width: 15%;
+
+  @media only screen and (max-width: 768px) {
+    width: 25%;
+  }
 `;
 
 const Title = styled.h1`

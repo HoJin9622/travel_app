@@ -11,6 +11,12 @@ const Container = styled.div`
   align-items: center;
   padding: 213px 0 0 240px;
   height: 35%;
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 0 0 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const PhraseContainer = styled.div`
@@ -25,6 +31,10 @@ const Title = styled.h1`
   font-weight: bold;
   line-height: 110%;
   letter-spacing: 0.01em;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const Description = styled.h4`
@@ -32,6 +42,10 @@ const Description = styled.h4`
   font-size: 28px;
   line-height: 150%;
   opacity: 0.8;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const NextContainer = styled.div`
@@ -42,6 +56,12 @@ const NextContainer = styled.div`
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(70px);
   border-radius: 16px 0px 0px 16px;
+
+  @media only screen and (max-width: 768px) {
+    height: 400px;
+    width: 100%;
+    margin-top: 30px;
+  }
 `;
 
 const MetaData = styled.div`
@@ -51,12 +71,20 @@ const MetaData = styled.div`
   justify-content: space-between;
   color: #ffffff;
   padding: 48px 0 48px 36px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 24px 0 24px 28px;
+  }
 `;
 
 const NextTitle = styled.h3`
   font-family: "Karla", sans-serif;
   font-size: 36px;
   line-height: 135%;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const Arrow = styled.div`
