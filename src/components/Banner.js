@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 213px 0 0 240px;
-  height: 35%;
+  height: 55%;
 
   @media only screen and (max-width: 768px) {
     padding: 20px 0 0 20px;
