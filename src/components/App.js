@@ -6,14 +6,14 @@ import Booking from "./Booking";
 
 const Background = styled.div`
   width: 100%;
-  height: 812px;
+  height: 100vh;
   background-image: url("https://github.com/HoJin9622/travel_app/blob/master/public/images/bg.png?raw=true");
   background-size: cover;
   background-position: center center;
 
   @media only screen and (max-width: 768px) {
     position: relative;
-    min-height: 812px;
+    height: 823px;
   }
 `;
 

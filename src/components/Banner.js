@@ -10,9 +10,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 213px 0 0 240px;
-  height: 55%;
+  height: 35%;
 
   @media only screen and (max-width: 768px) {
+    height: 55%;
     padding: 20px 0 0 20px;
     flex-direction: column;
     align-items: flex-start;
