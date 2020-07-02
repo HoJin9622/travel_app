@@ -63,7 +63,7 @@ const NextContainer = styled.div`
   border-radius: 16px 0px 0px 16px;
 
   @media only screen and (max-width: 768px) {
-    height: 400px;
+    height: 229px;
     width: 100%;
     margin-top: 30px;
   }
