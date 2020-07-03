@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -180,6 +180,27 @@ const BookingInformation = styled.h4`
   color: #ffffff;
 `;
 
+const DropDownMenuContainer = styled.div`
+  display: none;
+  position: absolute;
+  top: -40px;
+  background: rgba(76, 86, 85, 0.95);
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 5px 0 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+`;
+
+const DropDownMenuFont = styled.h5`
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 5px 0;
+  z-index: 2;
+`;
+
 const SearchButton = styled.div`
   width: 240px;
   height: 72px;
@@ -201,24 +222,69 @@ const SearchButton = styled.div`
 `;
 
 function Booking() {
+  const [view, setView] = useState("6730 Luna Land North Rhiannonmouth");
+  const accommodation = useRef();
+  const luna = useRef();
+  const busan = useRef();
+  const ulsan = useRef();
+  const daegu = useRef();
+
+  const toggleAccommodation = () => {
+    if (accommodation.current.style.display === "block") {
+      accommodation.current.style.display = "none";
+      return;
+    }
+    accommodation.current.style.display = "block";
+    return;
+  };
+
+  const setAccommodation = (region) => {
+    setView(region.current.innerHTML);
+    accommodation.current.style.display = "none";
+  };
+
   return (
     <Container>
       <BG>
         <ReservationContainer>
           <Title>Book your vacation</Title>
           <BookingContainer>
-            <AccommodationContainer>
+            <AccommodationContainer onClick={toggleAccommodation}>
               <DataContainer>
                 <IconContainer>{homeIcon}</IconContainer>
                 <TextContainer>
                   <BookTitle>Accommodation</BookTitle>
-                  <BookingInformation>
-                    6730 Luna Land North Rhiannonmouth
-                  </BookingInformation>
+                  <BookingInformation>{view}</BookingInformation>
                 </TextContainer>
               </DataContainer>
               <IconContainer>{dropDownIcon}</IconContainer>
             </AccommodationContainer>
+            <DropDownMenuContainer ref={accommodation}>
+              <DropDownMenuFont
+                ref={luna}
+                onClick={() => setAccommodation(luna)}
+              >
+                6730 Luna Land North Rhiannonmouth
+              </DropDownMenuFont>
+              <DropDownMenuFont
+                ref={busan}
+                onClick={() => setAccommodation(busan)}
+              >
+                6620 Luna Land North Rhiannonmouth
+              </DropDownMenuFont>
+              <DropDownMenuFont
+                ref={ulsan}
+                onClick={() => setAccommodation(ulsan)}
+              >
+                6290 Luna Land North Rhiannonmouth
+              </DropDownMenuFont>
+              <DropDownMenuFont
+                ref={daegu}
+                onClick={() => setAccommodation(daegu)}
+              >
+                6510 Luna Land North Rhiannonmouth
+              </DropDownMenuFont>
+            </DropDownMenuContainer>
             <CheckIn>
               <IconContainer>{calenderIcon}</IconContainer>
               <TextContainer>
