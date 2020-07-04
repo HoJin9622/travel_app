@@ -180,12 +180,25 @@ const BookingInformation = styled.h4`
   color: #ffffff;
 `;
 
-const DropDownMenuContainer = styled.div`
+const AccommodatioMenuContainer = styled.div`
   display: none;
   position: absolute;
   top: -40px;
   background: rgba(76, 86, 85, 0.95);
   min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 5px 0 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+`;
+
+const GuestsMenuContainer = styled.div`
+  display: none;
+  position: absolute;
+  top: -40px;
+  background: rgba(76, 86, 85, 0.95);
+  min-width: 280px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 5px 0 5px 10px;
@@ -222,12 +235,20 @@ const SearchButton = styled.div`
 `;
 
 function Booking() {
-  const [view, setView] = useState("6730 Luna Land North Rhiannonmouth");
+  const [accommodationDisplay, setAccommodationDisplay] = useState(
+    "6730 Luna Land North Rhiannonmouth"
+  );
+  const [guestsDisplay, setGuestsDisplay] = useState("4 adults");
   const accommodation = useRef();
+  const guests = useRef();
   const luna = useRef();
   const busan = useRef();
   const ulsan = useRef();
   const daegu = useRef();
+  const first = useRef();
+  const second = useRef();
+  const third = useRef();
+  const fourth = useRef();
 
   const toggleAccommodation = () => {
     if (accommodation.current.style.display === "block") {
@@ -238,9 +259,25 @@ function Booking() {
     return;
   };
 
+  const toggleGuests = () => {
+    if (guests.current.style.display === "block") {
+      guests.current.style.display = "none";
+      return;
+    }
+    guests.current.style.display = "block";
+    return;
+  };
+
   const setAccommodation = (region) => {
-    setView(region.current.innerHTML);
+    setAccommodationDisplay(region.current.innerHTML);
     accommodation.current.style.display = "none";
+    toggleAccommodation();
+  };
+
+  const setGuests = (person) => {
+    setGuestsDisplay(person.current.innerHTML);
+    guests.current.style.display = "none";
+    toggleGuests();
   };
 
   return (
@@ -254,37 +291,40 @@ function Booking() {
                 <IconContainer>{homeIcon}</IconContainer>
                 <TextContainer>
                   <BookTitle>Accommodation</BookTitle>
-                  <BookingInformation>{view}</BookingInformation>
+                  <BookingInformation>
+                    {accommodationDisplay}
+                  </BookingInformation>
                 </TextContainer>
               </DataContainer>
               <IconContainer>{dropDownIcon}</IconContainer>
+              <AccommodatioMenuContainer ref={accommodation}>
+                <DropDownMenuFont
+                  ref={luna}
+                  onClick={() => setAccommodation(luna)}
+                >
+                  6730 Luna Land North Rhiannonmouth
+                </DropDownMenuFont>
+                <DropDownMenuFont
+                  ref={busan}
+                  onClick={() => setAccommodation(busan)}
+                >
+                  6290 Laura Lane North Rhiannon Mouth
+                </DropDownMenuFont>
+                <DropDownMenuFont
+                  ref={ulsan}
+                  onClick={() => setAccommodation(ulsan)}
+                >
+                  6290 Mills Creek Ln, North Ridgeville
+                </DropDownMenuFont>
+                <DropDownMenuFont
+                  ref={daegu}
+                  onClick={() => setAccommodation(daegu)}
+                >
+                  6290 San Renaldo Cir, Buena Park
+                </DropDownMenuFont>
+              </AccommodatioMenuContainer>
             </AccommodationContainer>
-            <DropDownMenuContainer ref={accommodation}>
-              <DropDownMenuFont
-                ref={luna}
-                onClick={() => setAccommodation(luna)}
-              >
-                6730 Luna Land North Rhiannonmouth
-              </DropDownMenuFont>
-              <DropDownMenuFont
-                ref={busan}
-                onClick={() => setAccommodation(busan)}
-              >
-                6620 Luna Land North Rhiannonmouth
-              </DropDownMenuFont>
-              <DropDownMenuFont
-                ref={ulsan}
-                onClick={() => setAccommodation(ulsan)}
-              >
-                6290 Luna Land North Rhiannonmouth
-              </DropDownMenuFont>
-              <DropDownMenuFont
-                ref={daegu}
-                onClick={() => setAccommodation(daegu)}
-              >
-                6510 Luna Land North Rhiannonmouth
-              </DropDownMenuFont>
-            </DropDownMenuContainer>
+
             <CheckIn>
               <IconContainer>{calenderIcon}</IconContainer>
               <TextContainer>
@@ -298,15 +338,35 @@ function Booking() {
                 <BookingInformation>19.06.2019</BookingInformation>
               </TextContainer>
             </CheckOut>
-            <Guests>
+            <Guests onClick={toggleGuests}>
               <DataContainer>
                 <IconContainer>{userIcon}</IconContainer>
                 <TextContainer>
                   <BookTitle>Guests</BookTitle>
-                  <BookingInformation>4 adults</BookingInformation>
+                  <BookingInformation>{guestsDisplay}</BookingInformation>
                 </TextContainer>
               </DataContainer>
               <IconContainer>{dropDownIcon}</IconContainer>
+              <GuestsMenuContainer ref={guests}>
+                <DropDownMenuFont ref={first} onClick={() => setGuests(first)}>
+                  1 adults
+                </DropDownMenuFont>
+                <DropDownMenuFont
+                  ref={second}
+                  onClick={() => setGuests(second)}
+                >
+                  2 adults
+                </DropDownMenuFont>
+                <DropDownMenuFont ref={third} onClick={() => setGuests(third)}>
+                  3 adults
+                </DropDownMenuFont>
+                <DropDownMenuFont
+                  ref={fourth}
+                  onClick={() => setGuests(fourth)}
+                >
+                  4 adults
+                </DropDownMenuFont>
+              </GuestsMenuContainer>
             </Guests>
           </BookingContainer>
         </ReservationContainer>
