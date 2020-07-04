@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const right_arrow = <FontAwesomeIcon icon={faArrowRight} />;
 
@@ -31,7 +31,7 @@ const PhraseContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 96px;
   font-weight: bold;
   line-height: 110%;
@@ -43,7 +43,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.h4`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 28px;
   line-height: 150%;
   opacity: 0.8;
@@ -84,7 +84,7 @@ const MetaData = styled.div`
 `;
 
 const NextTitle = styled.h3`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 36px;
   line-height: 135%;
 
@@ -100,7 +100,7 @@ const Arrow = styled.div`
 `;
 
 const Next = styled.div`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 20px;
   line-height: 20px;
   mix-blend-mode: normal;
@@ -109,7 +109,7 @@ const Next = styled.div`
 
 const NextImage = styled.div`
   width: 40%;
-  background-image: url("https://github.com/HoJin9622/travel_app/blob/master/public/images/nextImage.png?raw=true");
+  background-image: url('https://github.com/HoJin9622/travel_app/blob/master/public/images/nextImage.png?raw=true');
   background-size: cover;
   background-position: center center;
 

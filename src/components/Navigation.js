@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ const SideNavi = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
@@ -49,7 +49,7 @@ const Title = styled.h1`
 `;
 
 const NaviLetter = styled.h4`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;

@@ -1,12 +1,14 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
   faCalendarCheck,
   faUserAlt,
   faSortDown,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const homeIcon = <FontAwesomeIcon icon={faHome} />;
 const calenderIcon = <FontAwesomeIcon icon={faCalendarCheck} />;
@@ -55,7 +57,7 @@ const ReservationContainer = styled.div`
 `;
 
 const Title = styled.h4`
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
   line-height: 21px;
   display: flex;
@@ -76,7 +78,7 @@ const BookingContainer = styled.div`
   border-radius: 10px;
   display: flex;
   color: #e7e7f2;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -217,7 +219,7 @@ const DropDownMenuFont = styled.h5`
 const SearchButton = styled.div`
   width: 240px;
   height: 72px;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
   line-height: 20px;
   color: #ffffff;
@@ -236,9 +238,12 @@ const SearchButton = styled.div`
 
 function Booking() {
   const [accommodationDisplay, setAccommodationDisplay] = useState(
-    "6730 Luna Land North Rhiannonmouth"
+    '6730 Luna Land North Rhiannonmouth'
   );
-  const [guestsDisplay, setGuestsDisplay] = useState("4 adults");
+  const [guestsDisplay, setGuestsDisplay] = useState('4 adults');
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
   const accommodation = useRef();
   const guests = useRef();
   const luna = useRef();
@@ -251,34 +256,50 @@ function Booking() {
   const fourth = useRef();
 
   const toggleAccommodation = () => {
-    if (accommodation.current.style.display === "block") {
-      accommodation.current.style.display = "none";
+    if (accommodation.current.style.display === 'block') {
+      accommodation.current.style.display = 'none';
       return;
     }
-    accommodation.current.style.display = "block";
+    accommodation.current.style.display = 'block';
     return;
   };
 
   const toggleGuests = () => {
-    if (guests.current.style.display === "block") {
-      guests.current.style.display = "none";
+    if (guests.current.style.display === 'block') {
+      guests.current.style.display = 'none';
       return;
     }
-    guests.current.style.display = "block";
+    guests.current.style.display = 'block';
     return;
   };
 
   const setAccommodation = (region) => {
     setAccommodationDisplay(region.current.innerHTML);
-    accommodation.current.style.display = "none";
+    accommodation.current.style.display = 'none';
     toggleAccommodation();
   };
 
   const setGuests = (person) => {
     setGuestsDisplay(person.current.innerHTML);
-    guests.current.style.display = "none";
+    guests.current.style.display = 'none';
     toggleGuests();
   };
+
+  const CustomInput = ({ value, onClick }) => (
+    <button
+      style={{
+        color: '#ffffff',
+        backgroundColor: 'transparent',
+        fontSize: '16px',
+        fontFamily: "'Karla', sans-serif",
+        border: 'none',
+        padding: '0',
+      }}
+      onClick={onClick}
+    >
+      {value}
+    </button>
+  );
 
   return (
     <Container>
@@ -324,18 +345,29 @@ function Booking() {
                 </DropDownMenuFont>
               </AccommodatioMenuContainer>
             </AccommodationContainer>
-
             <CheckIn>
               <IconContainer>{calenderIcon}</IconContainer>
               <TextContainer>
                 <BookTitle>Check-in</BookTitle>
-                <BookingInformation>19.06.2019</BookingInformation>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  dateFormat='dd/MM/yyyy'
+                  minDate={new Date()}
+                  customInput={<CustomInput />}
+                />
               </TextContainer>
             </CheckIn>
             <CheckOut>
               <TextContainer>
                 <BookTitle>Check-out</BookTitle>
-                <BookingInformation>19.06.2019</BookingInformation>
+                <DatePicker
+                  selected={endDate}
+                  onChange={(date) => setEndDate(date)}
+                  dateFormat='dd/MM/yyyy'
+                  minDate={new Date()}
+                  customInput={<CustomInput />}
+                />
               </TextContainer>
             </CheckOut>
             <Guests onClick={toggleGuests}>
