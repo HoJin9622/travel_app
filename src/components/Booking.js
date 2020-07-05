@@ -193,6 +193,10 @@ const AccommodatioMenuContainer = styled.div`
   padding: 5px 0 5px 10px;
   border-radius: 25px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    top: -90px;
+  }
 `;
 
 const GuestsMenuContainer = styled.div`
@@ -206,6 +210,10 @@ const GuestsMenuContainer = styled.div`
   padding: 5px 0 5px 10px;
   border-radius: 25px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    top: 45px;
+  }
 `;
 
 const DropDownMenuFont = styled.h5`
@@ -233,6 +241,7 @@ const SearchButton = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+    height: 53px;
   }
 `;
 
