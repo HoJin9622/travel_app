@@ -13,7 +13,7 @@ const Container = styled.div`
   height: 35%;
 
   @media only screen and (max-width: 768px) {
-    height: 55%;
+    height: 50%;
     padding: 20px 0 0 20px;
     flex-direction: column;
     align-items: flex-start;

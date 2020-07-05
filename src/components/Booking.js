@@ -212,7 +212,7 @@ const GuestsMenuContainer = styled.div`
   cursor: pointer;
 
   @media only screen and (max-width: 768px) {
-    top: 45px;
+    top: 65px;
   }
 `;
 
