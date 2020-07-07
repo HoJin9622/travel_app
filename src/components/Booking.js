@@ -85,6 +85,7 @@ const BookingContainer = styled.div`
     flex-direction: column;
     border: none;
     height: 75%;
+    width: 100%;
   }
 `;
 
