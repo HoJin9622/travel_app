@@ -48,7 +48,7 @@ const BG = styled.div`
 `;
 
 const ReservationContainer = styled.div`
-  width: 70%;
+  width: 90%;
 
   @media only screen and (max-width: 768px) {
     width: 90%;
@@ -72,6 +72,7 @@ const Title = styled.h4`
 `;
 
 const BookingContainer = styled.div`
+  width: 75%;
   height: 72px;
   border: 1px solid rgba(231, 231, 242, 0.3);
   box-sizing: border-box;
@@ -84,6 +85,18 @@ const BookingContainer = styled.div`
     flex-direction: column;
     border: none;
     height: 75%;
+  }
+`;
+
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    height: 87%;
   }
 `;
 
@@ -315,103 +328,111 @@ function Booking() {
       <BG>
         <ReservationContainer>
           <Title>Book your vacation</Title>
-          <BookingContainer>
-            <AccommodationContainer onClick={toggleAccommodation}>
-              <DataContainer>
-                <IconContainer>{homeIcon}</IconContainer>
+          <SearchContainer>
+            <BookingContainer>
+              <AccommodationContainer onClick={toggleAccommodation}>
+                <DataContainer>
+                  <IconContainer>{homeIcon}</IconContainer>
+                  <TextContainer>
+                    <BookTitle>Accommodation</BookTitle>
+                    <BookingInformation>
+                      {accommodationDisplay}
+                    </BookingInformation>
+                  </TextContainer>
+                </DataContainer>
+                <IconContainer>{dropDownIcon}</IconContainer>
+                <AccommodatioMenuContainer ref={accommodation}>
+                  <DropDownMenuFont
+                    ref={luna}
+                    onClick={() => setAccommodation(luna)}
+                  >
+                    6730 Luna Land North Rhiannonmouth
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={busan}
+                    onClick={() => setAccommodation(busan)}
+                  >
+                    6290 Laura Lane North Rhiannon Mouth
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={ulsan}
+                    onClick={() => setAccommodation(ulsan)}
+                  >
+                    6290 Mills Creek Ln, North Ridgeville
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={daegu}
+                    onClick={() => setAccommodation(daegu)}
+                  >
+                    6290 San Renaldo Cir, Buena Park
+                  </DropDownMenuFont>
+                </AccommodatioMenuContainer>
+              </AccommodationContainer>
+              <CheckIn>
+                <IconContainer>{calenderIcon}</IconContainer>
                 <TextContainer>
-                  <BookTitle>Accommodation</BookTitle>
-                  <BookingInformation>
-                    {accommodationDisplay}
-                  </BookingInformation>
+                  <BookTitle>Check-in</BookTitle>
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    dateFormat='dd/MM/yyyy'
+                    minDate={new Date()}
+                    customInput={<CustomInput />}
+                  />
                 </TextContainer>
-              </DataContainer>
-              <IconContainer>{dropDownIcon}</IconContainer>
-              <AccommodatioMenuContainer ref={accommodation}>
-                <DropDownMenuFont
-                  ref={luna}
-                  onClick={() => setAccommodation(luna)}
-                >
-                  6730 Luna Land North Rhiannonmouth
-                </DropDownMenuFont>
-                <DropDownMenuFont
-                  ref={busan}
-                  onClick={() => setAccommodation(busan)}
-                >
-                  6290 Laura Lane North Rhiannon Mouth
-                </DropDownMenuFont>
-                <DropDownMenuFont
-                  ref={ulsan}
-                  onClick={() => setAccommodation(ulsan)}
-                >
-                  6290 Mills Creek Ln, North Ridgeville
-                </DropDownMenuFont>
-                <DropDownMenuFont
-                  ref={daegu}
-                  onClick={() => setAccommodation(daegu)}
-                >
-                  6290 San Renaldo Cir, Buena Park
-                </DropDownMenuFont>
-              </AccommodatioMenuContainer>
-            </AccommodationContainer>
-            <CheckIn>
-              <IconContainer>{calenderIcon}</IconContainer>
-              <TextContainer>
-                <BookTitle>Check-in</BookTitle>
-                <DatePicker
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  dateFormat='dd/MM/yyyy'
-                  minDate={new Date()}
-                  customInput={<CustomInput />}
-                />
-              </TextContainer>
-            </CheckIn>
-            <CheckOut>
-              <TextContainer>
-                <BookTitle>Check-out</BookTitle>
-                <DatePicker
-                  selected={endDate}
-                  onChange={(date) => setEndDate(date)}
-                  dateFormat='dd/MM/yyyy'
-                  minDate={new Date()}
-                  customInput={<CustomInput />}
-                />
-              </TextContainer>
-            </CheckOut>
-            <Guests onClick={toggleGuests}>
-              <DataContainer>
-                <IconContainer>{userIcon}</IconContainer>
+              </CheckIn>
+              <CheckOut>
                 <TextContainer>
-                  <BookTitle>Guests</BookTitle>
-                  <BookingInformation>{guestsDisplay}</BookingInformation>
+                  <BookTitle>Check-out</BookTitle>
+                  <DatePicker
+                    selected={endDate}
+                    onChange={(date) => setEndDate(date)}
+                    dateFormat='dd/MM/yyyy'
+                    minDate={new Date()}
+                    customInput={<CustomInput />}
+                  />
                 </TextContainer>
-              </DataContainer>
-              <IconContainer>{dropDownIcon}</IconContainer>
-              <GuestsMenuContainer ref={guests}>
-                <DropDownMenuFont ref={first} onClick={() => setGuests(first)}>
-                  1 adults
-                </DropDownMenuFont>
-                <DropDownMenuFont
-                  ref={second}
-                  onClick={() => setGuests(second)}
-                >
-                  2 adults
-                </DropDownMenuFont>
-                <DropDownMenuFont ref={third} onClick={() => setGuests(third)}>
-                  3 adults
-                </DropDownMenuFont>
-                <DropDownMenuFont
-                  ref={fourth}
-                  onClick={() => setGuests(fourth)}
-                >
-                  4 adults
-                </DropDownMenuFont>
-              </GuestsMenuContainer>
-            </Guests>
-          </BookingContainer>
+              </CheckOut>
+              <Guests onClick={toggleGuests}>
+                <DataContainer>
+                  <IconContainer>{userIcon}</IconContainer>
+                  <TextContainer>
+                    <BookTitle>Guests</BookTitle>
+                    <BookingInformation>{guestsDisplay}</BookingInformation>
+                  </TextContainer>
+                </DataContainer>
+                <IconContainer>{dropDownIcon}</IconContainer>
+                <GuestsMenuContainer ref={guests}>
+                  <DropDownMenuFont
+                    ref={first}
+                    onClick={() => setGuests(first)}
+                  >
+                    1 adults
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={second}
+                    onClick={() => setGuests(second)}
+                  >
+                    2 adults
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={third}
+                    onClick={() => setGuests(third)}
+                  >
+                    3 adults
+                  </DropDownMenuFont>
+                  <DropDownMenuFont
+                    ref={fourth}
+                    onClick={() => setGuests(fourth)}
+                  >
+                    4 adults
+                  </DropDownMenuFont>
+                </GuestsMenuContainer>
+              </Guests>
+            </BookingContainer>
+            <SearchButton>Search</SearchButton>
+          </SearchContainer>
         </ReservationContainer>
-        <SearchButton>Search</SearchButton>
       </BG>
     </Container>
   );
